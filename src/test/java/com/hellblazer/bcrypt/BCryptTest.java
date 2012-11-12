@@ -165,7 +165,11 @@ public class BCryptTest {
     @Test
     public void testInternationalChars() {
         System.out.print("BCrypt.hashpw w/ international chars: ");
-        String pw1 = "更更更更";
+        String pw1 = new String(new byte[] { (byte) 0xcf, (byte) 0x80,
+                (byte) 0xcf, (byte) 0x80, (byte) 0xcf, (byte) 0x80,
+                (byte) 0xcf, (byte) 0x80, (byte) 0xcf, (byte) 0x80,
+                (byte) 0xcf, (byte) 0x80, (byte) 0xcf, (byte) 0x80,
+                (byte) 0xcf, (byte) 0x80, });
         String pw2 = "????????";
 
         String h1 = BCrypt.hashpw(pw1, BCrypt.gensalt());
