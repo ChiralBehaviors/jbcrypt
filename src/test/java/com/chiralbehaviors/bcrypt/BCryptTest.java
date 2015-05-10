@@ -1,4 +1,4 @@
-package com.hellblazer.bcrypt;
+package com.chiralbehaviors.bcrypt;
 
 // Copyright (c) 2006 Damien Miller <djm@mindrot.org>
 //
